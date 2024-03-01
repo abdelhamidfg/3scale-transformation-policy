@@ -1,0 +1,31 @@
+{
+  "$schema": "http://apicast.io/policy-v1.1/schema#manifest#",
+  "name": "request transformer",
+  "summary": "transform request parameter into a header attrbuite",
+  "description": [
+    "transform request parameter into a header attrbuite  "
+  ],
+  "version": "1.0.0",
+  "configuration": {
+    "type": "object",
+    "properties": {
+      "rules": {
+        "description": "List of rules ",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "param_name": {
+              "description": "Request parameter name",
+              "type": "string"
+            },
+            "header_name": {
+              "description": "Header attrbuite name",
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
